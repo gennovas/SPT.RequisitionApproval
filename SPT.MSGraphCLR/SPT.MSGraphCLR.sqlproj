@@ -80,6 +80,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Startup.sql" />
-    <None Include="MSGraphCLRKey.snk" />
   </ItemGroup>
 </Project>

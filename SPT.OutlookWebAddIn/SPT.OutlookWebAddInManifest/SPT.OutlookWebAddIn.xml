@@ -12,12 +12,12 @@
 	<DefaultLocale>en-US</DefaultLocale>
 	<DisplayName DefaultValue="Requisition Approval" />
 	<Description DefaultValue="Requisition Approval"/>
-	<IconUrl DefaultValue="https://appsforoffice.microsoft.com/lib/1.1/hosted/images/icon64.png"/>
-	<HighResolutionIconUrl DefaultValue="https://appsforoffice.microsoft.com/lib/1.1/hosted/images/icon128.png"/>
+	<IconUrl DefaultValue="https://gennovas.github.io/SPT.RequisitionApproval/SPT.OutlookWebAddInWeb/Images/icon64.png"/>
+	<HighResolutionIconUrl DefaultValue="https://gennovas.github.io/SPT.RequisitionApproval/SPT.OutlookWebAddInWeb/Images/icon128.png"/>
 	<SupportUrl DefaultValue="https://contoso.com/support" />
 
 	<AppDomains>
-		<AppDomain>https://localhost:44364</AppDomain>
+		<AppDomain>https://gennovas.github.io</AppDomain>
 	</AppDomains>
 
 	<Hosts>
@@ -33,7 +33,7 @@
 	<FormSettings>
 		<Form xsi:type="ItemRead">
 			<DesktopSettings>
-				<SourceLocation DefaultValue="https://localhost:44364/MessageRead.html"/>
+				<SourceLocation DefaultValue="https://gennovas.github.io/SPT.RequisitionApproval/SPT.OutlookWebAddInWeb/MessageRead.html"/>
 				<RequestedHeight>250</RequestedHeight>
 			</DesktopSettings>
 		</Form>
@@ -148,12 +148,12 @@
 
 			<Resources>
 				<bt:Images>
-					<bt:Image id="icon16" DefaultValue="https://appsforoffice.microsoft.com/lib/1.1/hosted/images/icon16.png"/>
-					<bt:Image id="icon32" DefaultValue="https://appsforoffice.microsoft.com/lib/1.1/hosted/images/icon32.png"/>
-					<bt:Image id="icon80" DefaultValue="https://appsforoffice.microsoft.com/lib/1.1/hosted/images/icon80.png"/>
+					<bt:Image id="icon16" DefaultValue="https://gennovas.github.io/SPT.RequisitionApproval/SPT.OutlookWebAddInWeb/Images/icon16.png"/>
+					<bt:Image id="icon32" DefaultValue="https://gennovas.github.io/SPT.RequisitionApproval/SPT.OutlookWebAddInWeb/Images/icon32.png"/>
+					<bt:Image id="icon80" DefaultValue="https://gennovas.github.io/SPT.RequisitionApproval/SPT.OutlookWebAddInWeb/Images/icon80.png"/>
 				</bt:Images>
 				<bt:Urls>
-					<bt:Url id="functionFile" DefaultValue="https://localhost:44364/Functions/FunctionFile.html"/>
+					<bt:Url id="functionFile" DefaultValue="https://gennovas.github.io/SPT.RequisitionApproval/SPT.OutlookWebAddInWeb/Functions/FunctionFile.html"/>
 				</bt:Urls>
 				<bt:ShortStrings>
 					<bt:String id="groupLabel" DefaultValue="Requisition Approval"/>
