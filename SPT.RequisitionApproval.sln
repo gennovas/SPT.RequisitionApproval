@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36202.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SPT.MSGraphCLR", "SPT.MSGraphCLR\SPT.MSGraphCLR.sqlproj", "{12881BDD-79EA-45E2-8319-6AEFDCA67FB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPT.RequisitionApprovalOutlookWebAddIn", "SPT.OutlookWebAddIn\SPT.RequisitionApprovalOutlookWebAddIn.csproj", "{F8B14FD8-6623-4CEF-A92D-AA4B8967139E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPT.RequisitionApprovalOutlookWebAddInWeb", "SPT.OutlookWebAddInWeb\SPT.RequisitionApprovalOutlookWebAddInWeb.csproj", "{D76EAB4A-C43A-47EC-AF6A-7ABD0B17A834}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12881BDD-79EA-45E2-8319-6AEFDCA67FB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12881BDD-79EA-45E2-8319-6AEFDCA67FB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12881BDD-79EA-45E2-8319-6AEFDCA67FB3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{12881BDD-79EA-45E2-8319-6AEFDCA67FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12881BDD-79EA-45E2-8319-6AEFDCA67FB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12881BDD-79EA-45E2-8319-6AEFDCA67FB3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F8B14FD8-6623-4CEF-A92D-AA4B8967139E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B14FD8-6623-4CEF-A92D-AA4B8967139E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B14FD8-6623-4CEF-A92D-AA4B8967139E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F8B14FD8-6623-4CEF-A92D-AA4B8967139E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B14FD8-6623-4CEF-A92D-AA4B8967139E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B14FD8-6623-4CEF-A92D-AA4B8967139E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D76EAB4A-C43A-47EC-AF6A-7ABD0B17A834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D76EAB4A-C43A-47EC-AF6A-7ABD0B17A834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D76EAB4A-C43A-47EC-AF6A-7ABD0B17A834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D76EAB4A-C43A-47EC-AF6A-7ABD0B17A834}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74F89799-A2AC-462C-BD6A-AF6E4B4993A3}
+	EndGlobalSection
+EndGlobal

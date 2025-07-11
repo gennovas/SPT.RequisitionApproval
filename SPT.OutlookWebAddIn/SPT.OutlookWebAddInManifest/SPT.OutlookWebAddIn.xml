@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+  xsi:type="MailApp">
+
+	<Id>e1c53559-cb34-4c5d-b519-dcf36b50bcce</Id>
+	<Version>1.0.0.0</Version>
+	<ProviderName>SPT</ProviderName>
+	<DefaultLocale>en-US</DefaultLocale>
+	<DisplayName DefaultValue="Requisition Approval" />
+	<Description DefaultValue="Requisition Approval"/>
+	<IconUrl DefaultValue="https://appsforoffice.microsoft.com/lib/1.1/hosted/images/icon64.png"/>
+	<HighResolutionIconUrl DefaultValue="https://appsforoffice.microsoft.com/lib/1.1/hosted/images/icon128.png"/>
+	<SupportUrl DefaultValue="https://contoso.com/support" />
+
+	<AppDomains>
+		<AppDomain>https://localhost:44364</AppDomain>
+	</AppDomains>
+
+	<Hosts>
+		<Host Name="Mailbox" />
+	</Hosts>
+
+	<Requirements>
+		<Sets>
+			<Set Name="Mailbox" MinVersion="1.1" />
+		</Sets>
+	</Requirements>
+
+	<FormSettings>
+		<Form xsi:type="ItemRead">
+			<DesktopSettings>
+				<SourceLocation DefaultValue="https://localhost:44364/MessageRead.html"/>
+				<RequestedHeight>250</RequestedHeight>
+			</DesktopSettings>
+		</Form>
+	</FormSettings>
+
+	<Permissions>ReadWriteItem</Permissions>
+
+	<Rule xsi:type="RuleCollection" Mode="Or">
+		<Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
+	</Rule>
+
+	<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+		<VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
+			<Requirements>
+				<bt:Sets DefaultMinVersion="1.3">
+					<bt:Set Name="Mailbox" />
+				</bt:Sets>
+			</Requirements>
+			<Hosts>
+				<Host xsi:type="MailHost">
+					<DesktopFormFactor>
+						<FunctionFile resid="functionFile" />
+						<ExtensionPoint xsi:type="MessageReadCommandSurface">
+							<OfficeTab id="TabDefault">
+								<Group id="msgReadGroup">
+									<Label resid="groupLabel" />
+
+									<!-- Approve Button -->
+									<Control xsi:type="Button" id="btnApprove">
+										<Label resid="approveButtonLabel"/>
+										<Supertip>
+											<Title resid="approveButtonLabel"/>
+											<Description resid="approveButtonDescription"/>
+										</Supertip>
+										<Icon>
+											<bt:Image size="16" resid="icon16"/>
+											<bt:Image size="32" resid="icon32"/>
+											<bt:Image size="80" resid="icon80"/>
+										</Icon>
+										<Action xsi:type="ExecuteFunction">
+											<FunctionName>approveFunction</FunctionName>
+										</Action>
+									</Control>
+
+									<!-- Reject Menu -->
+									<Control xsi:type="Menu" id="btnRejectMenu">
+										<Label resid="rejectButtonLabel" />
+										<Supertip>
+											<Title resid="rejectButtonLabel" />
+											<Description resid="rejectButtonDescription" />
+										</Supertip>
+										<Icon>
+											<bt:Image size="16" resid="icon16"/>
+											<bt:Image size="32" resid="icon32"/>
+											<bt:Image size="80" resid="icon80"/>
+										</Icon>
+										<Items>
+											<Item id="rejectOption1" xsi:type="MenuItem">
+												<Label resid="rejectOption1Label"/>
+												<Supertip>
+													<Title resid="rejectOption1Label"/>
+													<Description resid="rejectOption1Description"/>
+												</Supertip>
+												<Icon>
+													<bt:Image size="16" resid="icon16"/>
+													<bt:Image size="32" resid="icon32"/>
+													<bt:Image size="80" resid="icon80"/>
+												</Icon>
+												<Action xsi:type="ExecuteFunction">
+													<FunctionName>rejectOption1Function</FunctionName>
+												</Action>
+											</Item>
+											<Item id="rejectOption2" xsi:type="MenuItem">
+												<Label resid="rejectOption2Label"/>
+												<Supertip>
+													<Title resid="rejectOption2Label"/>
+													<Description resid="rejectOption2Description"/>
+												</Supertip>
+												<Icon>
+													<bt:Image size="16" resid="icon16"/>
+													<bt:Image size="32" resid="icon32"/>
+													<bt:Image size="80" resid="icon80"/>
+												</Icon>
+												<Action xsi:type="ExecuteFunction">
+													<FunctionName>rejectOption2Function</FunctionName>
+												</Action>
+											</Item>
+											<Item id="rejectOption3" xsi:type="MenuItem">
+												<Label resid="rejectOption3Label"/>
+												<Supertip>
+													<Title resid="rejectOption3Label"/>
+													<Description resid="rejectOption3Description"/>
+												</Supertip>
+												<Icon>
+													<bt:Image size="16" resid="icon16"/>
+													<bt:Image size="32" resid="icon32"/>
+													<bt:Image size="80" resid="icon80"/>
+												</Icon>
+												<Action xsi:type="ExecuteFunction">
+													<FunctionName>rejectOption3Function</FunctionName>
+												</Action>
+											</Item>
+										</Items>
+									</Control>
+
+								</Group>
+							</OfficeTab>
+						</ExtensionPoint>
+					</DesktopFormFactor>
+				</Host>
+			</Hosts>
+
+			<Resources>
+				<bt:Images>
+					<bt:Image id="icon16" DefaultValue="https://appsforoffice.microsoft.com/lib/1.1/hosted/images/icon16.png"/>
+					<bt:Image id="icon32" DefaultValue="https://appsforoffice.microsoft.com/lib/1.1/hosted/images/icon32.png"/>
+					<bt:Image id="icon80" DefaultValue="https://appsforoffice.microsoft.com/lib/1.1/hosted/images/icon80.png"/>
+				</bt:Images>
+				<bt:Urls>
+					<bt:Url id="functionFile" DefaultValue="https://localhost:44364/Functions/FunctionFile.html"/>
+				</bt:Urls>
+				<bt:ShortStrings>
+					<bt:String id="groupLabel" DefaultValue="Requisition Approval"/>
+					<bt:String id="approveButtonLabel" DefaultValue="อนุมัติ"/>
+					<bt:String id="rejectButtonLabel" DefaultValue="ไม่อนุมัติ"/>
+					<bt:String id="rejectOption1Label" DefaultValue="ยอดไม่ถูกต้อง"/>
+					<bt:String id="rejectOption2Label" DefaultValue="ขั้นตอนไม่ถูกต้อง"/>
+					<bt:String id="rejectOption3Label" DefaultValue="อื่นๆ"/>
+				</bt:ShortStrings>
+				<bt:LongStrings>
+					<bt:String id="approveButtonDescription" DefaultValue="อนุมัติรายการนี้"/>
+					<bt:String id="rejectButtonDescription" DefaultValue="ปฏิเสธรายการนี้พร้อมตัวเลือก"/>
+					<bt:String id="rejectOption1Description" DefaultValue="ยอดเงินไม่ถูกต้อง"/>
+					<bt:String id="rejectOption2Description" DefaultValue="ขั้นตอนไม่ถูกต้อง"/>
+					<bt:String id="rejectOption3Description" DefaultValue="เหตุผลอื่นๆ"/>
+				</bt:LongStrings>
+			</Resources>
+		</VersionOverrides>
+	</VersionOverrides>
+</OfficeApp>
