@@ -12,8 +12,8 @@
 	<DefaultLocale>en-US</DefaultLocale>
 	<DisplayName DefaultValue="Requisition Approval" />
 	<Description DefaultValue="Requisition Approval"/>
-	<IconUrl DefaultValue="https://gennovas.github.io/SPT.RequisitionApproval/SPT.OutlookWebAddInWeb/Images/icon64.png"/>
-	<HighResolutionIconUrl DefaultValue="https://gennovas.github.io/SPT.RequisitionApproval/SPT.OutlookWebAddInWeb/Images/icon128.png"/>
+	<IconUrl DefaultValue="https://gennovas.github.io/SPT.RequisitionApproval/SPT.OutlookWebAddInWeb/Images/Icon64.png"/>
+	<HighResolutionIconUrl DefaultValue="https://gennovas.github.io/SPT.RequisitionApproval/SPT.OutlookWebAddInWeb/Images/Icon128.png"/>
 	<SupportUrl DefaultValue="https://contoso.com/support" />
 
 	<AppDomains>
