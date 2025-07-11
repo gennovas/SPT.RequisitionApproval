@@ -30,6 +30,7 @@ function rejectOption3Function(event) {
 // Common Reply Function
 function handleReply(status, reasonCode) {
     Office.context.mailbox.item.subject.getAsync(function (subjectResult) {
+        console.log("subject.getAsync returned", subjectResult);
         if (subjectResult.status === Office.AsyncResultStatus.Succeeded) {
             const subject = subjectResult.value || "";
             let body = "";
