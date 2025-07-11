@@ -29,28 +29,27 @@ function rejectOption3Function(event) {
 
 // Common Reply Function
 function handleReply(status, reasonCode) {
-    Office.context.mailbox.item.subject.getAsync(function (subjectResult) {
-        console.log("subject.getAsync returned", subjectResult);
-        if (subjectResult.status === Office.AsyncResultStatus.Succeeded) {
-            const subject = subjectResult.value || "";
-            let body = "";
+    try {
+        const subject = Office.context.mailbox.item.subject || "";
+        let body = "";
 
-            if (status === "approved") {
-                body = `${subject} was approved.`;
-            } else if (status === "rejected") {
-                body = `${subject} was rejected with reason code ${reasonCode}`;
-            }
-
-            Office.context.mailbox.item.replyAsync(
-                { htmlBody: body },
-                function (replyResult) {
-                    if (replyResult.status !== Office.AsyncResultStatus.Succeeded) {
-                        console.error("Reply failed: ", replyResult.error.message);
-                    }
-                }
-            );
-        } else {
-            console.error("Failed to get subject: ", subjectResult.error.message);
+        if (status === "approved") {
+            body = `${subject} was approved.`;
+        } else if (status === "rejected") {
+            body = `${subject} was rejected with reason code ${reasonCode}`;
         }
-    });
+
+        Office.context.mailbox.item.replyAsync(
+            { htmlBody: body },
+            function (replyResult) {
+                if (replyResult.status === Office.AsyncResultStatus.Succeeded) {
+                    console.log("Reply sent successfully");
+                } else {
+                    console.error("Reply failed: ", replyResult.error.message);
+                }
+            }
+        );
+    } catch (error) {
+        console.error("Error in handleReply:", error);
+    }
 }
