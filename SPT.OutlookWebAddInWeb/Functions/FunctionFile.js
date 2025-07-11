@@ -39,16 +39,11 @@ function handleReply(status, reasonCode) {
             body = `${subject} was rejected with reason code ${reasonCode}`;
         }
 
-        Office.context.mailbox.item.replyAsync(
-            { htmlBody: body },
-            function (replyResult) {
-                if (replyResult.status === Office.AsyncResultStatus.Succeeded) {
-                    console.log("Reply sent successfully");
-                } else {
-                    console.error("Reply failed: ", replyResult.error.message);
-                }
-            }
-        );
+        // ใช้ displayReplyForm แทน replyAsync
+        Office.context.mailbox.displayReplyForm({
+            htmlBody: body
+        });
+
     } catch (error) {
         console.error("Error in handleReply:", error);
     }
